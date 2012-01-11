@@ -1,0 +1,12 @@
+# ~.autotest
+require 'rubygems'
+require 'autotest_notification'
+require "test_notifier/autotest"
+
+SPEAKING = false
+DOOM_EDITION = false
+BUUF = false
+PENDING = false
+STICKY = false
+SUCCESS_SOUND = ''
+FAILURE_SOUND = ''
