@@ -1,7 +1,6 @@
 # ~.autotest
 require 'rubygems'
 require 'autotest_notification'
-require "test_notifier/autotest"
 
 SPEAKING = false
 DOOM_EDITION = false
@@ -10,3 +9,9 @@ PENDING = false
 STICKY = false
 SUCCESS_SOUND = ''
 FAILURE_SOUND = ''
+
+Autotest.add_hook :initialize do |autotest|rb
+  autotest.add_mapping(%r%^spec/(requests)/.*$%) do |filename, _|
+    filename
+  end
+end
